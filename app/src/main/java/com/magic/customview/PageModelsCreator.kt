@@ -39,6 +39,34 @@ object PageModelsCreator {
                 R.layout.view_drawone_practice_point_view
             )
         )
+        pageModels.add(
+            PageModel(
+                R.string.title_draw_oval,
+                R.layout.view_drawone_sample_oval_view,
+                R.layout.view_drawone_practice_oval_view
+            )
+        )
+        pageModels.add(
+            PageModel(
+                R.string.title_draw_line,
+                R.layout.view_drawone_sample_line_view,
+                R.layout.view_drawone_practice_line_view
+            )
+        )
+        pageModels.add(
+            PageModel(
+                R.string.title_draw_round_rect,
+                R.layout.view_drawone_sample_round_rect_view,
+                R.layout.view_drawone_practice_round_rect_view
+            )
+        )
+        pageModels.add(
+            PageModel(
+                R.string.title_draw_arc,
+                R.layout.view_drawone_sample_arc_view,
+                R.layout.view_drawone_practice_arc_view
+            )
+        )
         return pageModels
     }
 }

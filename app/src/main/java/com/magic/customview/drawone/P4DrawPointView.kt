@@ -14,10 +14,10 @@ class P4DrawPointView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
 
-    private val mPointers: Array<Point> = arrayOf(
-        Point(100, 100),
-        Point(300, 100),
-        Point(100, 300)
+    private val mPointers: Array<PointF> = arrayOf(
+        PointF(100F, 100F),
+        PointF(300F, 100F),
+        PointF(100F, 300F)
     )
 
     private val mPaint: Paint = Paint()
@@ -29,12 +29,12 @@ class P4DrawPointView @JvmOverloads constructor(
 
         mPaint.strokeCap = Paint.Cap.BUTT
         mPaint.strokeWidth = 20F
-        canvas?.drawPoint(mPointers[0].x.toFloat(), mPointers[0].y.toFloat(), mPaint)
+        canvas?.drawPoint(mPointers[0].x, mPointers[0].y, mPaint)
 
         mPaint.strokeCap = Paint.Cap.ROUND
-        canvas?.drawPoint(mPointers[1].x.toFloat(), mPointers[1].y.toFloat(), mPaint)
+        canvas?.drawPoint(mPointers[1].x, mPointers[1].y, mPaint)
 
         mPaint.strokeCap = Paint.Cap.SQUARE
-        canvas?.drawPoint(mPointers[2].x.toFloat(), mPointers[2].y.toFloat(), mPaint)
+        canvas?.drawPoint(mPointers[2].x, mPointers[2].y, mPaint)
     }
 }
