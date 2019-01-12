@@ -31,6 +31,7 @@ class P8DrawArcView @JvmOverloads constructor(
         mPaint.isAntiAlias = true
         mPaint.style = Paint.Style.FILL
 
+        mPaint.color = Color.BLACK
         //startAngle -120F == 240F
         canvas?.drawArc(mRectF, -120F, 80F, true, mPaint)
 

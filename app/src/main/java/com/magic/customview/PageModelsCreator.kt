@@ -67,6 +67,13 @@ object PageModelsCreator {
                 R.layout.view_drawone_practice_arc_view
             )
         )
+        pageModels.add(
+            PageModel(
+                R.string.title_draw_path,
+                R.layout.view_drawone_sample_path_view,
+                R.layout.view_drawone_practice_path_view
+            )
+        )
         return pageModels
     }
 }
