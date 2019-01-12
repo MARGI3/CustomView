@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CustomView</string>
+    <string name="draw_basic_button_text">Draw Basic</string>
+</resources>
