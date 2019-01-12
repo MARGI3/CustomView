@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View?) {
         when(view?.id) {
-            R.id.btn_basic -> startActivity(PageActivity.createIntent(this, ModelsInitialiser.getDrawOneModeList()))
+            R.id.btn_basic -> startActivity(PageActivity.createIntent(this, PageModelsCreator.getDrawOneModeList()))
         }
     }
 }

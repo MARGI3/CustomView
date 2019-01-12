@@ -9,9 +9,9 @@ import android.view.ViewGroup
 import android.view.ViewStub
 
 /**
- * author : maji
+ * author : Magic
  * date   : 12/01/2019
- * mail   : maji@bilibili.com
+ * mail   : 562224864cross@gmail.com
  */
 class PageFragment : Fragment() {
 
@@ -43,7 +43,7 @@ class PageFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_page_one, container, false)
+        val view = inflater.inflate(R.layout.fragment_page, container, false)
 
         val sampleStub = view.findViewById<ViewStub>(R.id.sample_stub)
         sampleStub.layoutResource = mSampleLayoutRes

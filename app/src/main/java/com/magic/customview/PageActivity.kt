@@ -14,17 +14,15 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 
 /**
- * author : maji
+ * author : Magic
  * date   : 12/01/2019
- * mail   : maji@bilibili.com
+ * mail   : 562224864cross@gmail.com
  */
-
-
 class PageActivity : AppCompatActivity() {
 
-    lateinit var mTabLayout: TabLayout
-    lateinit var mViewPager: ViewPager
-    var mPageModels: List<PageModel>? = null
+    private lateinit var mTabLayout: TabLayout
+    private lateinit var mViewPager: ViewPager
+    private var mPageModels: List<PageModel>? = null
 
     companion object {
 

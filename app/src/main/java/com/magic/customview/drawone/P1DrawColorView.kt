@@ -7,9 +7,9 @@ import android.util.AttributeSet
 import android.view.View
 
 /**
- * author : maji
+ * author : Magic
  * date   : 12/01/2019
- * mail   : maji@bilibili.com
+ * mail   : 562224864cross@gmail.com
  */
 class P1DrawColorView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
