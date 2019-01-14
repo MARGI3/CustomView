@@ -8,4 +8,5 @@
     <string name="title_draw_round_rect">drawRoundRect()</string>
     <string name="title_draw_arc">drawArc()</string>
     <string name="title_draw_path">drawPath()</string>
+    <string name="title_fill_type">FillType</string>
 </resources>
