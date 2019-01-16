@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CustomView</string>
-    <string name="draw_basic_button_text">Draw Basic</string>
+    <string name="btn_text_draw_basic">Draw Basic</string>
+    <string name="btn_text_paint">Paint</string>
 </resources>

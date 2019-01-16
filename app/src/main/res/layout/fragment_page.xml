@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <RelativeLayout
+        android:id="@+id/sample_wrapper"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -18,11 +19,13 @@
     </RelativeLayout>
 
     <View
+        android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#33000000" />
 
     <RelativeLayout
+        android:id="@+id/practice_wrapper"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">

@@ -8,5 +8,9 @@
     <string name="title_draw_round_rect">drawRoundRect()</string>
     <string name="title_draw_arc">drawArc()</string>
     <string name="title_draw_path">drawPath()</string>
-    <string name="title_fill_type">FillType</string>
+    <string name="title_draw_fill_type">FillType</string>
+
+    <string name="title_paint_linear_gradient">LinearGradient()</string>
+    <string name="title_paint_radial_gradient">RadialGradient()</string>
+    <string name="title_paint_sweep_gradient">SweepGradient()</string>
 </resources>

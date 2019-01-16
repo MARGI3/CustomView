@@ -46,12 +46,28 @@ class PageFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_page, container, false)
 
         val sampleStub = view.findViewById<ViewStub>(R.id.sample_stub)
-        sampleStub.layoutResource = mSampleLayoutRes
-        sampleStub.inflate()
+        if (mSampleLayoutRes > 0) {
+            sampleStub.layoutResource = mSampleLayoutRes
+            sampleStub.inflate()
+            sampleStub.visibility = View.VISIBLE
+        } else {
+            val sampleWrapper = view.findViewById<View>(R.id.sample_wrapper)
+            sampleWrapper.visibility = View.GONE
+            val divider = view.findViewById<View>(R.id.divider)
+            divider.visibility = View.GONE
+        }
 
         val practiceStub = view.findViewById<ViewStub>(R.id.practice_stub)
-        practiceStub.layoutResource = mPracticeLayoutRes
-        practiceStub.inflate()
+        if (mPracticeLayoutRes > 0) {
+            practiceStub.layoutResource = mPracticeLayoutRes
+            practiceStub.inflate()
+            practiceStub.visibility = View.VISIBLE
+        } else {
+            val practiceWrapper = view.findViewById<View>(R.id.practice_wrapper)
+            practiceWrapper.visibility = View.GONE
+            val divider = view.findViewById<View>(R.id.divider)
+            divider.visibility = View.GONE
+        }
 
         return view
     }

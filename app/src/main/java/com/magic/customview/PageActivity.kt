@@ -72,16 +72,16 @@ class PageActivity : AppCompatActivity() {
         mPageModels = intent.getParcelableArrayListExtra(BUNDLE_KEY_MODEL_LIST)
     }
 
-    class PageModel(
+    class PageModel @JvmOverloads constructor(
         @StringRes val mTitleRes: Int,
-        @LayoutRes val mSampleLayoutRes: Int,
-        @LayoutRes val mPracticeLayoutRes: Int
+        @LayoutRes val mPracticeLayoutRes: Int,
+        @LayoutRes val mSampleLayoutRes: Int = -1
     ) : Parcelable {
 
         override fun writeToParcel(parcel: Parcel, flags: Int) {
-             parcel.writeInt(mTitleRes)
-             parcel.writeInt(mSampleLayoutRes)
-             parcel.writeInt(mPracticeLayoutRes)
+            parcel.writeInt(mTitleRes)
+            parcel.writeInt(mPracticeLayoutRes)
+            parcel.writeInt(mSampleLayoutRes)
         }
 
         override fun describeContents(): Int {
