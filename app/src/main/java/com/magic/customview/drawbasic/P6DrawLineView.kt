@@ -1,4 +1,4 @@
-package com.magic.customview.drawone
+package com.magic.customview.drawbasic
 
 import android.content.Context
 import android.graphics.*
