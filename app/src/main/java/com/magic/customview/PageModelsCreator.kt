@@ -97,6 +97,18 @@ object PageModelsCreator {
                 R.layout.view_paint_practice_sweepgradient_view
             )
         )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_bitmap_shader,
+                R.layout.view_paint_practice_bitmapshader_view
+            )
+        )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_compose_shader,
+                R.layout.view_paint_practice_composeshader_view
+            )
+        )
         return pageModels
     }
 }
