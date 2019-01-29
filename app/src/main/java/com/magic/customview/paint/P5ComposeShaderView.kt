@@ -38,7 +38,7 @@ class P5ComposeShaderView @JvmOverloads constructor(
          */
         setLayerType(LAYER_TYPE_SOFTWARE, null)
 
-        //mShader原图像 mShader2目标图像
+        //mShader - source; mShader2 - target
         mComposeShader = ComposeShader(mShader, mShader2, PorterDuff.Mode.DST_IN)
 
         mPaint.shader = mComposeShader

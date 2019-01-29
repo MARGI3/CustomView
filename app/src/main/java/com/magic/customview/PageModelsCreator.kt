@@ -109,6 +109,12 @@ object PageModelsCreator {
                 R.layout.view_paint_practice_composeshader_view
             )
         )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_lighting_color_filter,
+                R.layout.view_paint_practice_lightingcolorfilter_view
+            )
+        )
         return pageModels
     }
 }
