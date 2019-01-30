@@ -28,6 +28,26 @@ class P6LightingColorFilterView @JvmOverloads constructor(
         setOnLongClickListener(this)
     }
 
+    /**
+     * LightingColorFilter(int mul, int add)
+     *
+     * mul用来和目标像素相乘, add用来和目标像素相加
+     *
+     * R = R * mul(R) / 0xff + add(R)
+     * G = G * mul(G) / 0xff + add(G)
+     * B = B * mul(B) / 0xff + add(B)
+     *
+     * 维持原始RGB状态的 LightingColorFilter(0xffffff, 0x000000)
+     * R = R * 0xff / 0xff + 0x00
+     * G = G * 0xff / 0xff + 0x00
+     * B = B * 0xff / 0xff + 0x00
+     *
+     * 去掉原始颜色的红色  LightingColorFilter(0x00ffff, 0x000000)
+     * R = R * 0x00 / 0xff + 0x00   //红色被移除
+     * G = G * 0xff / 0xff + 0x00
+     * B = B * 0xff / 0xff + 0x00
+     */
+
     @SuppressLint("DrawAllocation")
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)

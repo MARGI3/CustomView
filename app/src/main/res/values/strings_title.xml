@@ -16,4 +16,6 @@
     <string name="title_paint_bitmap_shader">BitmapShader()</string>
     <string name="title_paint_compose_shader">ComposeShader()</string>
     <string name="title_paint_lighting_color_filter">LightingColorFilter()</string>
+    <string name="title_paint_porterduff_color_filter">PorterDuffColorFilter()</string>
+    <string name="title_paint_colormatrix_color_filter">ColorMatrixColorFilter()</string>
 </resources>

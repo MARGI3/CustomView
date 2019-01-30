@@ -115,6 +115,18 @@ object PageModelsCreator {
                 R.layout.view_paint_practice_lightingcolorfilter_view
             )
         )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_porterduff_color_filter,
+                R.layout.view_paint_practice_porterduff_colorfilter_view
+            )
+        )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_colormatrix_color_filter,
+                R.layout.view_paint_practice_matrix_colorfilter_view
+            )
+        )
         return pageModels
     }
 }
