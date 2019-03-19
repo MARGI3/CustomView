@@ -2,21 +2,30 @@ package com.magic.customview
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.support.v7.widget.DividerItemDecoration
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import com.magic.customview.page.PageModelsCreator
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var mRecyclerView: RecyclerView
+    private lateinit var mAdapter: ListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        findViewById<View>(R.id.btn_basic).setOnClickListener(this)
-        findViewById<View>(R.id.btn_paint).setOnClickListener(this)
+        mRecyclerView = findViewById(R.id.recycler)
+        mRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        mAdapter = ListAdapter(createItemModels())
+        mRecyclerView.adapter = mAdapter
+        mRecyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
     }
 
-    override fun onClick(view: View?) {
-        when(view?.id) {
-            R.id.btn_basic -> startActivity(PageActivity.createIntent(this, PageModelsCreator.getDrawBasicModeList()))
-            R.id.btn_paint -> startActivity(PageActivity.createIntent(this, PageModelsCreator.getPaintModeList()))
-        }
+    private fun createItemModels(): ArrayList<ItemModel> {
+        val itemList = ArrayList<ItemModel>()
+        itemList.add(ItemModel(R.string.item_title_draw_basic, PageModelsCreator.getDrawBasicModeList()))
+        itemList.add(ItemModel(R.string.item_title_paint, PageModelsCreator.getPaintModeList()))
+        return itemList
     }
 }

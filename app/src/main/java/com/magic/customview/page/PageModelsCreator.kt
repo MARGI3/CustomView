@@ -1,6 +1,6 @@
-package com.magic.customview
+package com.magic.customview.page
 
-import com.magic.customview.PageActivity.PageModel
+import com.magic.customview.R
 
 /**
  * author : Magic
@@ -125,6 +125,12 @@ object PageModelsCreator {
             PageModel(
                 R.string.title_paint_colormatrix_color_filter,
                 R.layout.view_paint_practice_matrix_colorfilter_view
+            )
+        )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_xfermode,
+                R.layout.view_paint_practice_xfermode_view
             )
         )
         return pageModels

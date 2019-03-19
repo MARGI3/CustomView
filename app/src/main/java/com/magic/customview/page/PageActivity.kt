@@ -1,17 +1,14 @@
-package com.magic.customview
+package com.magic.customview.page
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.Parcel
-import android.os.Parcelable
-import android.support.annotation.LayoutRes
-import android.support.annotation.StringRes
 import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentPagerAdapter
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
+import com.magic.customview.R
 
 /**
  * author : Magic
@@ -70,33 +67,6 @@ class PageActivity : AppCompatActivity() {
 
     private fun extractIntent() {
         mPageModels = intent.getParcelableArrayListExtra(BUNDLE_KEY_MODEL_LIST)
-    }
-
-    class PageModel @JvmOverloads constructor(
-        @StringRes val mTitleRes: Int,
-        @LayoutRes val mPracticeLayoutRes: Int,
-        @LayoutRes val mSampleLayoutRes: Int = -1
-    ) : Parcelable {
-
-        override fun writeToParcel(parcel: Parcel, flags: Int) {
-            parcel.writeInt(mTitleRes)
-            parcel.writeInt(mPracticeLayoutRes)
-            parcel.writeInt(mSampleLayoutRes)
-        }
-
-        override fun describeContents(): Int {
-            return 0
-        }
-
-        companion object CREATOR : Parcelable.Creator<PageModel> {
-            override fun createFromParcel(parcel: Parcel): PageModel {
-                return PageModel(parcel.readInt(), parcel.readInt(), parcel.readInt())
-            }
-
-            override fun newArray(size: Int): Array<PageModel?> {
-                return arrayOfNulls(size)
-            }
-        }
     }
 
 }

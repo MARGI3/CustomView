@@ -1,4 +1,8 @@
 <resources>
+
+    <string name="item_title_draw_basic">Draw Basic</string>
+    <string name="item_title_paint">Paint</string>
+
     <string name="title_draw_color">drawColor()</string>
     <string name="title_draw_circle">drawCircle()</string>
     <string name="title_draw_rect">drawRect()</string>
@@ -18,4 +22,5 @@
     <string name="title_paint_lighting_color_filter">LightingColorFilter()</string>
     <string name="title_paint_porterduff_color_filter">PorterDuffColorFilter()</string>
     <string name="title_paint_colormatrix_color_filter">ColorMatrixColorFilter()</string>
+    <string name="title_paint_xfermode">XferMode</string>
 </resources>
