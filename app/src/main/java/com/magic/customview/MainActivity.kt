@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
     private fun createItemModels(): ArrayList<ItemModel> {
         val itemList = ArrayList<ItemModel>()
         itemList.add(ItemModel(R.string.item_title_draw_basic, PageModelsCreator.getDrawBasicModeList()))
-        itemList.add(ItemModel(R.string.item_title_paint, PageModelsCreator.getPaintModeList()))
+        itemList.add(ItemModel(R.string.item_title_paint_color, PageModelsCreator.getPaintColorModeList()))
+        itemList.add(ItemModel(R.string.item_title_paint_effect, PageModelsCreator.getPaintEffectModeList()))
         return itemList
     }
 }

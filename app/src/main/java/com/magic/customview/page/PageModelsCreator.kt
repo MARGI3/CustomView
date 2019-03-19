@@ -77,60 +77,89 @@ object PageModelsCreator {
         return pageModels
     }
 
-    fun getPaintModeList(): ArrayList<PageModel> {
+    fun getPaintColorModeList(): ArrayList<PageModel> {
         val pageModels = ArrayList<PageModel>()
         pageModels.add(
             PageModel(
-                R.string.title_paint_linear_gradient,
-                R.layout.view_paint_practice_lineargradient_view
+                R.string.title_paint_color_linear_gradient,
+                R.layout.view_paint_color_practice_lineargradient_view
             )
         )
         pageModels.add(
             PageModel(
-                R.string.title_paint_radial_gradient,
-                R.layout.view_paint_practice_radialgradient_view
+                R.string.title_paint_color_radial_gradient,
+                R.layout.view_paint_color_practice_radialgradient_view
             )
         )
         pageModels.add(
             PageModel(
-                R.string.title_paint_sweep_gradient,
-                R.layout.view_paint_practice_sweepgradient_view
+                R.string.title_paint_color_sweep_gradient,
+                R.layout.view_paint_color_practice_sweepgradient_view
             )
         )
         pageModels.add(
             PageModel(
-                R.string.title_paint_bitmap_shader,
-                R.layout.view_paint_practice_bitmapshader_view
+                R.string.title_paint_color_bitmap_shader,
+                R.layout.view_paint_color_practice_bitmapshader_view
             )
         )
         pageModels.add(
             PageModel(
-                R.string.title_paint_compose_shader,
-                R.layout.view_paint_practice_composeshader_view
+                R.string.title_paint_color_compose_shader,
+                R.layout.view_paint_color_practice_composeshader_view
             )
         )
         pageModels.add(
             PageModel(
-                R.string.title_paint_lighting_color_filter,
-                R.layout.view_paint_practice_lightingcolorfilter_view
+                R.string.title_paint_color_lighting_color_filter,
+                R.layout.view_paint_color_practice_lightingcolorfilter_view
             )
         )
         pageModels.add(
             PageModel(
-                R.string.title_paint_porterduff_color_filter,
-                R.layout.view_paint_practice_porterduff_colorfilter_view
+                R.string.title_paint_color_porterduff_color_filter,
+                R.layout.view_paint_color_practice_porterduff_colorfilter_view
             )
         )
         pageModels.add(
             PageModel(
-                R.string.title_paint_colormatrix_color_filter,
-                R.layout.view_paint_practice_matrix_colorfilter_view
+                R.string.title_paint_color_matrix_color_filter,
+                R.layout.view_paint_color_practice_matrix_colorfilter_view
             )
         )
         pageModels.add(
             PageModel(
-                R.string.title_paint_xfermode,
-                R.layout.view_paint_practice_xfermode_view
+                R.string.title_paint_color_xfermode,
+                R.layout.view_paint_color_practice_xfermode_view
+            )
+        )
+        return pageModels
+    }
+
+    fun getPaintEffectModeList(): ArrayList<PageModel> {
+        val pageModels = ArrayList<PageModel>()
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_effect_anti_alias,
+                R.layout.view_paint_effect_practice_anti_alias_view
+            )
+        )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_effect_paint_style,
+                R.layout.view_paint_effect_practice_paint_style_view
+            )
+        )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_effect_stroke_width,
+                R.layout.view_paint_effect_practice_stroke_width_view
+            )
+        )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_effect_stroke_cap,
+                R.layout.view_paint_effect_practice_stroke_cap_view
             )
         )
         return pageModels
