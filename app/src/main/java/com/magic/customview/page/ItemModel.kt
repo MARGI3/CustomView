@@ -6,9 +6,9 @@ import android.support.annotation.LayoutRes
 import android.support.annotation.StringRes
 
 
-class PageModel @JvmOverloads constructor(
+class ItemModel @JvmOverloads constructor(
     @StringRes val mTitleRes: Int,
-    @LayoutRes val mPracticeLayoutRes: Int,
+    @LayoutRes val mPracticeLayoutRes: Int = -1,
     @LayoutRes val mSampleLayoutRes: Int = -1
 ) : Parcelable {
 
@@ -22,12 +22,12 @@ class PageModel @JvmOverloads constructor(
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<PageModel> {
-        override fun createFromParcel(parcel: Parcel): PageModel {
-            return PageModel(parcel.readInt(), parcel.readInt(), parcel.readInt())
+    companion object CREATOR : Parcelable.Creator<ItemModel> {
+        override fun createFromParcel(parcel: Parcel): ItemModel {
+            return ItemModel(parcel.readInt(), parcel.readInt(), parcel.readInt())
         }
 
-        override fun newArray(size: Int): Array<PageModel?> {
+        override fun newArray(size: Int): Array<ItemModel?> {
             return arrayOfNulls(size)
         }
     }

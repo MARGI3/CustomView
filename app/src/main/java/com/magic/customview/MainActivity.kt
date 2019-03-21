@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import com.magic.customview.page.ItemModel
 import com.magic.customview.page.PageModelsCreator
 
 class MainActivity : AppCompatActivity() {
@@ -24,9 +25,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun createItemModels(): ArrayList<ItemModel> {
         val itemList = ArrayList<ItemModel>()
-        itemList.add(ItemModel(R.string.item_title_draw_basic, PageModelsCreator.getDrawBasicModeList()))
-        itemList.add(ItemModel(R.string.item_title_paint_color, PageModelsCreator.getPaintColorModeList()))
-        itemList.add(ItemModel(R.string.item_title_paint_effect, PageModelsCreator.getPaintEffectModeList()))
+        itemList.addAll(PageModelsCreator.getDrawBasicModeList())
+        itemList.addAll(PageModelsCreator.getPaintColorModeList())
+        itemList.addAll(PageModelsCreator.getPaintEffectModeList())
         return itemList
     }
 }

@@ -1,7 +1,6 @@
 package com.magic.customview.page
 
 import android.os.Bundle
-import android.support.annotation.LayoutRes
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,41 +13,37 @@ import com.magic.customview.R
  * date   : 12/01/2019
  * mail   : 562224864cross@gmail.com
  */
-class PageFragment : Fragment() {
+class ItemFragment : Fragment() {
 
-    @LayoutRes var mSampleLayoutRes: Int = 0
-    @LayoutRes var mPracticeLayoutRes: Int = 0
+    private var mModel: ItemModel? = null
 
     companion object {
-        private const val BUNDLE_KEY_SAMPLE_RES: String = "bundle.key.sample.layout.res"
-        private const val BUNDLE_KEY_PRACTICE_RES: String = "bundle.key.practice.layout.res"
 
-        @JvmStatic
-        fun newInstance(@LayoutRes sampleLayoutRes: Int, @LayoutRes practiceLayoutRes: Int): Fragment {
-            val fragment = PageFragment()
-            val args = Bundle()
-            args.putInt(BUNDLE_KEY_SAMPLE_RES, sampleLayoutRes)
-            args.putInt(BUNDLE_KEY_PRACTICE_RES, practiceLayoutRes)
-            fragment.arguments = args
-            return fragment
-        }
+        const val TAG = "com.magic.customview.page.ItemFragment"
+
+        const val BUNDLE_KEY_MODEL: String = "bundle.key.model"
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val args = arguments
         if (args != null) {
-            mSampleLayoutRes = args.getInt(BUNDLE_KEY_SAMPLE_RES)
-            mPracticeLayoutRes = args.getInt(BUNDLE_KEY_PRACTICE_RES)
+            mModel = args.getParcelable(BUNDLE_KEY_MODEL)
         }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
+        if (mModel == null) {
+            return null
+        }
+
         val view = inflater.inflate(R.layout.fragment_page, container, false)
 
         val sampleStub = view.findViewById<ViewStub>(R.id.sample_stub)
-        if (mSampleLayoutRes > 0) {
-            sampleStub.layoutResource = mSampleLayoutRes
+        if (mModel!!.mSampleLayoutRes > 0) {
+            sampleStub.layoutResource = mModel!!.mSampleLayoutRes
             sampleStub.inflate()
             sampleStub.visibility = View.VISIBLE
         } else {
@@ -59,8 +54,8 @@ class PageFragment : Fragment() {
         }
 
         val practiceStub = view.findViewById<ViewStub>(R.id.practice_stub)
-        if (mPracticeLayoutRes > 0) {
-            practiceStub.layoutResource = mPracticeLayoutRes
+        if (mModel!!.mPracticeLayoutRes > 0) {
+            practiceStub.layoutResource = mModel!!.mPracticeLayoutRes
             practiceStub.inflate()
             practiceStub.visibility = View.VISIBLE
         } else {
