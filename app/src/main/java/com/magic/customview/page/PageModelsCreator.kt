@@ -162,6 +162,12 @@ object PageModelsCreator {
                 R.layout.view_paint_effect_practice_stroke_cap_view
             )
         )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_effect_stroke_join,
+                R.layout.view_paint_effect_practice_stroke_join_view
+            )
+        )
         return pageModels
     }
 }
