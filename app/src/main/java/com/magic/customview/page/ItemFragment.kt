@@ -19,8 +19,6 @@ class ItemFragment : Fragment() {
 
     companion object {
 
-        const val TAG = "com.magic.customview.page.ItemFragment"
-
         const val BUNDLE_KEY_MODEL: String = "bundle.key.model"
 
     }
@@ -28,8 +26,8 @@ class ItemFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val args = arguments
-        if (args != null) {
-            mModel = args.getParcelable(BUNDLE_KEY_MODEL)
+        args?.let {
+            mModel = it.getParcelable(BUNDLE_KEY_MODEL)
         }
     }
 
@@ -42,27 +40,29 @@ class ItemFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_page, container, false)
 
         val sampleStub = view.findViewById<ViewStub>(R.id.sample_stub)
-        if (mModel!!.mSampleLayoutRes > 0) {
-            sampleStub.layoutResource = mModel!!.mSampleLayoutRes
-            sampleStub.inflate()
-            sampleStub.visibility = View.VISIBLE
-        } else {
-            val sampleWrapper = view.findViewById<View>(R.id.sample_wrapper)
-            sampleWrapper.visibility = View.GONE
-            val divider = view.findViewById<View>(R.id.divider)
-            divider.visibility = View.GONE
-        }
+        mModel?.let {
+            if (it.mSampleLayoutRes > 0) {
+                sampleStub.layoutResource = it.mSampleLayoutRes
+                sampleStub.inflate()
+                sampleStub.visibility = View.VISIBLE
+            } else {
+                val sampleWrapper = view.findViewById<View>(R.id.sample_wrapper)
+                sampleWrapper.visibility = View.GONE
+                val divider = view.findViewById<View>(R.id.divider)
+                divider.visibility = View.GONE
+            }
 
-        val practiceStub = view.findViewById<ViewStub>(R.id.practice_stub)
-        if (mModel!!.mPracticeLayoutRes > 0) {
-            practiceStub.layoutResource = mModel!!.mPracticeLayoutRes
-            practiceStub.inflate()
-            practiceStub.visibility = View.VISIBLE
-        } else {
-            val practiceWrapper = view.findViewById<View>(R.id.practice_wrapper)
-            practiceWrapper.visibility = View.GONE
-            val divider = view.findViewById<View>(R.id.divider)
-            divider.visibility = View.GONE
+            val practiceStub = view.findViewById<ViewStub>(R.id.practice_stub)
+            if (it.mPracticeLayoutRes > 0) {
+                practiceStub.layoutResource = mModel!!.mPracticeLayoutRes
+                practiceStub.inflate()
+                practiceStub.visibility = View.VISIBLE
+            } else {
+                val practiceWrapper = view.findViewById<View>(R.id.practice_wrapper)
+                practiceWrapper.visibility = View.GONE
+                val divider = view.findViewById<View>(R.id.divider)
+                divider.visibility = View.GONE
+            }
         }
 
         return view

@@ -9,7 +9,7 @@ import android.util.AttributeSet
 import android.view.View
 
 
-class P7CornerPathEffect  @JvmOverloads constructor(
+class P6CornerPathEffect  @JvmOverloads constructor(
     context: Context?,
     attrs: AttributeSet,
     defStyleAttr: Int = 0

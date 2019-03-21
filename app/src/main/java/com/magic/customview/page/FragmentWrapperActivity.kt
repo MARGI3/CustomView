@@ -36,13 +36,15 @@ class FragmentWrapperActivity : AppCompatActivity() {
 
         extractIntent()
 
-        var fragment = supportFragmentManager.findFragmentByTag(ItemFragment.TAG)
+        var fragment = supportFragmentManager.findFragmentById(R.id.frame_layout)
         if (fragment == null) {
             fragment = Fragment.instantiate(this, mFragmentName, mFragmentArgs)
         }
-        supportFragmentManager.beginTransaction()
-            .add(R.id.frame_layout, fragment!!)
-            .commit()
+        fragment?.let {
+            supportFragmentManager.beginTransaction()
+                .add(R.id.frame_layout, it)
+                .commit()
+        }
     }
 
     private fun extractIntent() {
