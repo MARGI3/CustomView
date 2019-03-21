@@ -8,7 +8,7 @@ import android.util.AttributeSet
 import android.view.View
 
 
-class P1AntiAliasView @JvmOverloads constructor(
+class P1AntiAlias @JvmOverloads constructor(
     context: Context?,
     attrs: AttributeSet,
     defStyleAttr: Int = 0

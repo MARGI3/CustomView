@@ -168,6 +168,24 @@ object PageModelsCreator {
                 R.layout.view_paint_effect_practice_stroke_join_view
             )
         )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_effect_dash_path_effect,
+                R.layout.view_paint_effect_practice_dash_path_effect_view
+            )
+        )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_effect_corner_path_effect,
+                R.layout.view_paint_effect_practice_corner_path_effect_view
+            )
+        )
+        pageModels.add(
+            PageModel(
+                R.string.title_paint_effect_discrete_path_effect,
+                R.layout.view_paint_effect_practice_discrete_path_effect_view
+            )
+        )
         return pageModels
     }
 }

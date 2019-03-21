@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.magic.customview.item_paint.effect.P1AntiAlias xmlns:android="http://schemas.android.com/apk/res/android"
+<com.magic.customview.item_paint.effect.P7CornerPathEffect xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />

@@ -6,7 +6,7 @@ import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
 
-class P4StrokeCapView @JvmOverloads constructor(
+class P4StrokeCap @JvmOverloads constructor(
     context: Context?,
     attrs: AttributeSet,
     defStyleAttr: Int = 0

@@ -8,7 +8,7 @@ import android.util.AttributeSet
 import android.view.View
 
 
-class P2PaintStyleView @JvmOverloads constructor(
+class P2PaintStyle @JvmOverloads constructor(
     context: Context?,
     attrs: AttributeSet,
     defStyleAttr: Int = 0

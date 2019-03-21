@@ -8,7 +8,7 @@ import android.util.AttributeSet
 import android.view.View
 
 
-class P3StrokeWidthView @JvmOverloads constructor(
+class P3StrokeWidth @JvmOverloads constructor(
     context: Context?,
     attrs: AttributeSet,
     defStyleAttr: Int = 0

@@ -33,4 +33,7 @@
     <string name="title_paint_effect_stroke_width">StrokeWidth()</string>
     <string name="title_paint_effect_stroke_cap">StrokeCap()</string>
     <string name="title_paint_effect_stroke_join">StrokeJoin()</string>
+    <string name="title_paint_effect_dash_path_effect">DashPathEffect()</string>
+    <string name="title_paint_effect_corner_path_effect">CornerPathEffect()</string>
+    <string name="title_paint_effect_discrete_path_effect">DiscretePathEffect()</string>
 </resources>
