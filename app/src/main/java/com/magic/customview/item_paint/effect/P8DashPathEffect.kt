@@ -16,29 +16,27 @@ class P8DashPathEffect @JvmOverloads constructor(
 
     private val mDashPath = Path()
     private val mDashPathPaint = Paint()
+
     private val mDashPathEffect = DashPathEffect(floatArrayOf(20F, 10F), 0F)
-
-    private val mDashPath2 = Path()
-    private val mDashPathPaint2 = Paint()
     private val mDashPathEffect2 = DashPathEffect(floatArrayOf(20F, 10F), 5F)
-
-    private val mDashPath3 = Path()
-    private val mDashPathPaint3 = Paint()
     private val mDashPathEffect3 = DashPathEffect(floatArrayOf(20F, 10F), 10F)
-
-    private val mDashPath4 = Path()
-    private val mDashPathPaint4 = Paint()
     private val mDashPathEffect4 = DashPathEffect(floatArrayOf(20F, 10F), 15F)
-
-    private val mDashPath5 = Path()
-    private val mDashPathPaint5 = Paint()
     private val mDashPathEffect5 = DashPathEffect(floatArrayOf(20F, 10F), 20F)
+
+    init {
+        mDashPathPaint.strokeWidth = 4F
+        mDashPathPaint.isAntiAlias = true
+        mDashPathPaint.style = Paint.Style.STROKE
+
+        mDashPath.rMoveTo(100F, 0F)
+        mDashPath.rLineTo(800F, 0F)
+    }
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
 
         mPaint.color = Color.RED
-        canvas?.drawLine(100F,100F, 100F, 600F, mPaint)
+        canvas?.drawLine(100F,50F, 100F, 600F, mPaint)
 
         /**
          * 使用虚线来绘制线条
@@ -56,47 +54,30 @@ class P8DashPathEffect @JvmOverloads constructor(
          *
          * 动态的改变 phase 的值，可以达到 虚线移动的 效果
          */
-        mDashPathPaint.strokeWidth = 4F
-        mDashPathPaint.isAntiAlias = true
-        mDashPathPaint.style = Paint.Style.STROKE
+
+        canvas?.save()
+
+        canvas?.translate(0F, 100F)
         mDashPathPaint.pathEffect = mDashPathEffect
-        mDashPath.moveTo(100F, 150F)
-        mDashPath.lineTo(1000F, 150F)
         canvas?.drawPath(mDashPath, mDashPathPaint)
 
-        mDashPathPaint2.strokeWidth = 4F
-        mDashPathPaint2.isAntiAlias = true
-        mDashPathPaint2.style = Paint.Style.STROKE
-        mDashPathPaint2.pathEffect = mDashPathEffect2
-        mDashPath2.moveTo(100F, 250F)
-        mDashPath2.lineTo(1000F, 250F)
-        canvas?.drawPath(mDashPath2, mDashPathPaint2)
+        mDashPathPaint.pathEffect = mDashPathEffect2
+        canvas?.translate(0F, 100F)
+        canvas?.drawPath(mDashPath, mDashPathPaint)
 
-        mDashPathPaint3.strokeWidth = 4F
-        mDashPathPaint3.isAntiAlias = true
-        mDashPathPaint3.style = Paint.Style.STROKE
-        mDashPathPaint3.pathEffect = mDashPathEffect3
-        mDashPath3.moveTo(100F, 350F)
-        mDashPath3.lineTo(1000F, 350F)
-        canvas?.drawPath(mDashPath3, mDashPathPaint3)
+        mDashPathPaint.pathEffect = mDashPathEffect3
+        canvas?.translate(0F, 100F)
+        canvas?.drawPath(mDashPath, mDashPathPaint)
 
-        mDashPathPaint4.strokeWidth = 4F
-        mDashPathPaint4.isAntiAlias = true
-        mDashPathPaint4.style = Paint.Style.STROKE
-        mDashPathPaint4.pathEffect = mDashPathEffect4
-        mDashPath4.moveTo(100F, 450F)
-        mDashPath4.lineTo(1000F, 450F)
-        canvas?.drawPath(mDashPath4, mDashPathPaint4)
+        mDashPathPaint.pathEffect = mDashPathEffect4
+        canvas?.translate(0F, 100F)
+        canvas?.drawPath(mDashPath, mDashPathPaint)
 
-        mDashPathPaint5.strokeWidth = 4F
-        mDashPathPaint5.isAntiAlias = true
-        mDashPathPaint5.style = Paint.Style.STROKE
-        mDashPathPaint5.pathEffect = mDashPathEffect5
-        mDashPath5.moveTo(100F, 550F)
-        mDashPath5.lineTo(1000F, 550F)
-        canvas?.drawPath(mDashPath5, mDashPathPaint5)
+        mDashPathPaint.pathEffect = mDashPathEffect5
+        canvas?.translate(0F, 100F)
+        canvas?.drawPath(mDashPath, mDashPathPaint)
 
-
+        canvas?.restore()
     }
 
 }

@@ -40,10 +40,13 @@ class FragmentWrapperActivity : AppCompatActivity() {
         if (fragment == null) {
             fragment = Fragment.instantiate(this, mFragmentName, mFragmentArgs)
         }
+
         fragment?.let {
-            supportFragmentManager.beginTransaction()
-                .add(R.id.frame_layout, it)
-                .commit()
+            if (!fragment.isAdded) {
+                supportFragmentManager.beginTransaction()
+                    .add(R.id.frame_layout, it)
+                    .commit()
+            }
         }
     }
 

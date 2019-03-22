@@ -25,7 +25,6 @@ class P3StrokeWidth @JvmOverloads constructor(
         mPaint.style = Paint.Style.STROKE
         mPaint.isAntiAlias = true
 
-
         /**
          * 默认情况下，线条宽度为 0，但这个时候它依然能够画出线，线条的宽度为 1 像素
          *

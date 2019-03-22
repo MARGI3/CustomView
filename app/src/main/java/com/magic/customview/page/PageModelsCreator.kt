@@ -173,6 +173,12 @@ object PageModelsCreator {
         )
         pageModels.add(
             ItemModel(
+                R.string.title_paint_effect_stroke_miter,
+                R.layout.view_paint_effect_practice_stroke_miter_view
+            )
+        )
+        pageModels.add(
+            ItemModel(
                 R.string.title_paint_effect_dash_path_effect,
                 R.layout.view_paint_effect_practice_dash_path_effect_view
             )
@@ -187,6 +193,36 @@ object PageModelsCreator {
             ItemModel(
                 R.string.title_paint_effect_discrete_path_effect,
                 R.layout.view_paint_effect_practice_discrete_path_effect_view
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_paint_effect_path_dash_path_effect,
+                R.layout.view_paint_effect_practice_path_dash_path_effect_view
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_paint_effect_sum_path_effect,
+                R.layout.view_paint_effect_practice_sum_path_effect_view
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_paint_effect_compose_path_effect,
+                R.layout.view_paint_effect_practice_compose_path_effect_view
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_paint_effect_shadow_layer_effect,
+                R.layout.view_paint_effect_practice_shadow_layer_view
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_paint_effect_blur_mask_filter,
+                R.layout.view_paint_effect_practice_blur_mask_filter_view
             )
         )
         return pageModels

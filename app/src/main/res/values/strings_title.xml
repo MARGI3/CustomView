@@ -33,7 +33,13 @@
     <string name="title_paint_effect_stroke_width">StrokeWidth()</string>
     <string name="title_paint_effect_stroke_cap">StrokeCap()</string>
     <string name="title_paint_effect_stroke_join">StrokeJoin()</string>
+    <string name="title_paint_effect_stroke_miter">StrokeMiter()</string>
     <string name="title_paint_effect_dash_path_effect">DashPathEffect()</string>
     <string name="title_paint_effect_corner_path_effect">CornerPathEffect()</string>
     <string name="title_paint_effect_discrete_path_effect">DiscretePathEffect()</string>
+    <string name="title_paint_effect_path_dash_path_effect">PathDashPathEffect()</string>
+    <string name="title_paint_effect_sum_path_effect">SumPathEffect()</string>
+    <string name="title_paint_effect_compose_path_effect">ComposePathEffect()</string>
+    <string name="title_paint_effect_shadow_layer_effect">ShadowLayer()</string>
+    <string name="title_paint_effect_blur_mask_filter">BlurMaskFilter()</string>
 </resources>
