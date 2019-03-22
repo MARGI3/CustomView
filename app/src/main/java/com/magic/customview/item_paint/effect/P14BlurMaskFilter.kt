@@ -27,9 +27,8 @@ class P14BlurMaskFilter @JvmOverloads constructor(
 
     init {
 
-        mPaint.style = Paint.Style.STROKE
-        mPaint.strokeWidth = 1F
-        mPaint.color = Color.BLACK
+        mPaint.style = Paint.Style.FILL
+        mPaint.color = Color.BLUE
 
         //内外都模糊绘制
         mNormalMaskFilter = BlurMaskFilter(100F, BlurMaskFilter.Blur.NORMAL)
@@ -78,6 +77,27 @@ class P14BlurMaskFilter @JvmOverloads constructor(
         canvas?.translate( -(mRectF.width() + mDelta), 0F)
         mPaint.maskFilter = mOuterMaskFilter
         canvas?.drawBitmap(mBitmap, null, mRect, mPaint)
+
+
+        //left top circle
+        canvas?.translate(0F, 300F)
+        mPaint.maskFilter = mNormalMaskFilter
+        canvas?.drawCircle(300F, 300F, 100F, mPaint)
+
+        //right top circle
+        canvas?.translate(300F, 0F)
+        mPaint.maskFilter = mSolidMaskFilter
+        canvas?.drawCircle(300F, 300F, 100F, mPaint)
+
+        //right bottom
+        canvas?.translate(0F, 300F)
+        mPaint.maskFilter = mInnerMaskFilter
+        canvas?.drawCircle(300F, 300F, 100F, mPaint)
+
+        //left bottom
+        canvas?.translate(-300F, 0F)
+        mPaint.maskFilter = mOuterMaskFilter
+        canvas?.drawCircle(300F, 300F, 100F, mPaint)
 
         canvas?.restore()
 
