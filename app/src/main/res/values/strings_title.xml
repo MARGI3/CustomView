@@ -1,6 +1,45 @@
 <resources>
+
+    <string name="item_title_draw_basic">Draw Basic</string>
+    <string name="item_title_paint_color">Paint Color</string>
+    <string name="item_title_paint_effect">Paint Effect</string>
+
+    <!-- draw -->
     <string name="title_draw_color">drawColor()</string>
     <string name="title_draw_circle">drawCircle()</string>
     <string name="title_draw_rect">drawRect()</string>
     <string name="title_draw_point">drawPoint()</string>
+    <string name="title_draw_oval">drawOval()</string>
+    <string name="title_draw_line">drawLine()</string>
+    <string name="title_draw_round_rect">drawRoundRect()</string>
+    <string name="title_draw_arc">drawArc()</string>
+    <string name="title_draw_path">drawPath()</string>
+    <string name="title_draw_fill_type">FillType</string>
+
+    <!-- paint color -->
+    <string name="title_paint_color_linear_gradient">LinearGradient()</string>
+    <string name="title_paint_color_radial_gradient">RadialGradient()</string>
+    <string name="title_paint_color_sweep_gradient">SweepGradient()</string>
+    <string name="title_paint_color_bitmap_shader">BitmapShader()</string>
+    <string name="title_paint_color_compose_shader">ComposeShader()</string>
+    <string name="title_paint_color_lighting_color_filter">LightingColorFilter()</string>
+    <string name="title_paint_color_porterduff_color_filter">PorterDuffColorFilter()</string>
+    <string name="title_paint_color_matrix_color_filter">ColorMatrixColorFilter()</string>
+    <string name="title_paint_color_xfermode">XferMode</string>
+
+    <!-- paint effect -->
+    <string name="title_paint_effect_anti_alias">AntiAlias()</string>
+    <string name="title_paint_effect_paint_style">PaintStyle()</string>
+    <string name="title_paint_effect_stroke_width">StrokeWidth()</string>
+    <string name="title_paint_effect_stroke_cap">StrokeCap()</string>
+    <string name="title_paint_effect_stroke_join">StrokeJoin()</string>
+    <string name="title_paint_effect_stroke_miter">StrokeMiter()</string>
+    <string name="title_paint_effect_dash_path_effect">DashPathEffect()</string>
+    <string name="title_paint_effect_corner_path_effect">CornerPathEffect()</string>
+    <string name="title_paint_effect_discrete_path_effect">DiscretePathEffect()</string>
+    <string name="title_paint_effect_path_dash_path_effect">PathDashPathEffect()</string>
+    <string name="title_paint_effect_sum_path_effect">SumPathEffect()</string>
+    <string name="title_paint_effect_compose_path_effect">ComposePathEffect()</string>
+    <string name="title_paint_effect_shadow_layer_effect">ShadowLayer()</string>
+    <string name="title_paint_effect_blur_mask_filter">BlurMaskFilter()</string>
 </resources>
