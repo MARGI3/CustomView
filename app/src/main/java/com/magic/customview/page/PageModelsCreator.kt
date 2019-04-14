@@ -227,4 +227,28 @@ object PageModelsCreator {
         )
         return pageModels
     }
+
+    fun getCanvasDrawTextModelList(): ArrayList<ItemModel> {
+        val pageModels = ArrayList<ItemModel>()
+        pageModels.add(ItemModel(R.string.item_title_paint_effect))
+        pageModels.add(
+            ItemModel(
+                R.string.title_canvas_draw_text_position,
+                R.layout.view_canvas_draw_text_position
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_canvas_draw_text_on_path,
+                R.layout.view_canvas_draw_text_on_path
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_canvas_draw_text_static_layout,
+                R.layout.view_canvas_draw_text_static_layout
+            )
+        )
+        return pageModels
+    }
 }

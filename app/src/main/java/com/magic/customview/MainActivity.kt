@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         itemList.addAll(PageModelsCreator.getDrawBasicModeList())
         itemList.addAll(PageModelsCreator.getPaintColorModeList())
         itemList.addAll(PageModelsCreator.getPaintEffectModeList())
+        itemList.addAll(PageModelsCreator.getCanvasDrawTextModelList())
         return itemList
     }
 }

@@ -1,4 +1,4 @@
-package com.magic.customview.item_paint.effect
+package com.magic.customview.item_drawtext
 
 import android.content.Context
 import android.graphics.Canvas
@@ -8,8 +8,12 @@ import android.graphics.Path
 import android.util.AttributeSet
 import android.view.View
 
-
-class P7CornerPathEffect  @JvmOverloads constructor(
+/**
+ * author : magic
+ * date   : 14/04/2019
+ * mail   : 562224864cross@gmail.com
+ */
+class P2DrawTextOnPathView @JvmOverloads constructor(
     context: Context?,
     attrs: AttributeSet,
     defStyleAttr: Int = 0
@@ -35,6 +39,10 @@ class P7CornerPathEffect  @JvmOverloads constructor(
         mCornerPath.rLineTo(100F, -200F)
         mCornerPath.rLineTo(100F, 200F)
         canvas?.drawPath(mCornerPath, mPaint)
-    }
 
+        //hOffset 在path上左右方向位移
+        //vOffset 在path轨迹上下方法位移
+        mPaint.textSize = 48F
+        canvas?.drawTextOnPath("Hello World, Hello World, Hello World", mCornerPath, 5F, -5F, mPaint)
+    }
 }

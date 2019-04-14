@@ -3,6 +3,7 @@
     <string name="item_title_draw_basic">Draw Basic</string>
     <string name="item_title_paint_color">Paint Color</string>
     <string name="item_title_paint_effect">Paint Effect</string>
+    <string name="item_title_draw_text">Draw Text</string>
 
     <!-- draw -->
     <string name="title_draw_color">drawColor()</string>
@@ -42,4 +43,10 @@
     <string name="title_paint_effect_compose_path_effect">ComposePathEffect()</string>
     <string name="title_paint_effect_shadow_layer_effect">ShadowLayer()</string>
     <string name="title_paint_effect_blur_mask_filter">BlurMaskFilter()</string>
+
+    <!-- draw text -->
+    <string name="title_canvas_draw_text_position">DrawText Position</string>
+    <string name="title_canvas_draw_text_on_path">DrawTextOnPath</string>
+    <string name="title_canvas_draw_text_static_layout">StaticLayout</string>
+
 </resources>
