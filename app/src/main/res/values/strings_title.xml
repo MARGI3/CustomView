@@ -4,6 +4,7 @@
     <string name="item_title_paint_color">Paint Color</string>
     <string name="item_title_paint_effect">Paint Effect</string>
     <string name="item_title_draw_text">Draw Text</string>
+    <string name="item_title_canvas">Canvas</string>
 
     <!-- draw -->
     <string name="title_draw_color">drawColor()</string>
@@ -48,5 +49,12 @@
     <string name="title_canvas_draw_text_position">DrawText Position</string>
     <string name="title_canvas_draw_text_on_path">DrawTextOnPath</string>
     <string name="title_canvas_draw_text_static_layout">StaticLayout</string>
+
+    <!-- canvas -->
+    <string name="title_canvas_clip">Canvas ClipXXX</string>
+    <string name="title_canvas_translate">Canvas Translate</string>
+    <string name="title_canvas_rotate">Canvas Rotate</string>
+    <string name="title_canvas_scale">Canvas Scale</string>
+    <string name="title_canvas_skew">Canvas Skew</string>
 
 </resources>
