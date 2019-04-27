@@ -5,6 +5,7 @@
     <string name="item_title_paint_effect">Paint Effect</string>
     <string name="item_title_draw_text">Draw Text</string>
     <string name="item_title_canvas">Canvas</string>
+    <string name="item_title_matrix">Matrix</string>
 
     <!-- draw -->
     <string name="title_draw_color">drawColor()</string>
@@ -57,4 +58,6 @@
     <string name="title_canvas_scale">Canvas Scale</string>
     <string name="title_canvas_skew">Canvas Skew</string>
 
+    <string name="title_matrix_pre_and_post">Matrix preXXX() postXXX() difference</string>
+    <string name="title_matrix_translate">Matrix Translate</string>
 </resources>

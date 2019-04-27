@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         itemList.addAll(PageModelsCreator.getPaintEffectModeList())
         itemList.addAll(PageModelsCreator.getCanvasDrawTextModelList())
         itemList.addAll(PageModelsCreator.getCanvasModelList())
+        itemList.addAll(PageModelsCreator.getMatrixModelList())
         return itemList
     }
 }

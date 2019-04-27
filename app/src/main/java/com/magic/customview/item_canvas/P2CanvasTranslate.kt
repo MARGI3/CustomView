@@ -18,14 +18,12 @@ class P2CanvasTranslate @JvmOverloads constructor(
     private var mBitmap: Bitmap
 
     init {
-        //TODO do it in the back ground thread
+        //TODO do it in the background thread
         mBitmap = BitmapFactory.decodeResource(resources, R.drawable.batman)
     }
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-
-        canvas?.drawBitmap(mBitmap, null, mBitmapRectF, mPaint)
 
         /**
          * canvas.translate() will translate the canvas axis

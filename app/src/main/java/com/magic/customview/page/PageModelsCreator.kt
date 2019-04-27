@@ -287,4 +287,22 @@ object PageModelsCreator {
         )
         return pageModels
     }
+
+    fun getMatrixModelList(): ArrayList<ItemModel> {
+        val pageModels = ArrayList<ItemModel>()
+        pageModels.add(ItemModel(R.string.item_title_matrix))
+        pageModels.add(
+            ItemModel(
+                R.string.title_matrix_pre_and_post,
+                R.layout.view_matrix_pre_post_diff
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_matrix_translate,
+                R.layout.view_matrix_translate
+            )
+        )
+        return pageModels
+    }
 }
