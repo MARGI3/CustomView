@@ -227,4 +227,82 @@ object PageModelsCreator {
         )
         return pageModels
     }
+
+    fun getCanvasDrawTextModelList(): ArrayList<ItemModel> {
+        val pageModels = ArrayList<ItemModel>()
+        pageModels.add(ItemModel(R.string.item_title_paint_effect))
+        pageModels.add(
+            ItemModel(
+                R.string.title_canvas_draw_text_position,
+                R.layout.view_canvas_draw_text_position
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_canvas_draw_text_on_path,
+                R.layout.view_canvas_draw_text_on_path
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_canvas_draw_text_static_layout,
+                R.layout.view_canvas_draw_text_static_layout
+            )
+        )
+        return pageModels
+    }
+
+    fun getCanvasModelList(): ArrayList<ItemModel> {
+        val pageModels = ArrayList<ItemModel>()
+        pageModels.add(ItemModel(R.string.item_title_canvas))
+        pageModels.add(
+            ItemModel(
+                R.string.title_canvas_clip,
+                R.layout.view_canvas_clip
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_canvas_translate,
+                R.layout.view_canvas_translate
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_canvas_rotate,
+                R.layout.view_canvas_rotate
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_canvas_scale,
+                R.layout.view_canvas_scale
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_canvas_skew,
+                R.layout.view_canvas_skew
+            )
+        )
+        return pageModels
+    }
+
+    fun getMatrixModelList(): ArrayList<ItemModel> {
+        val pageModels = ArrayList<ItemModel>()
+        pageModels.add(ItemModel(R.string.item_title_matrix))
+        pageModels.add(
+            ItemModel(
+                R.string.title_matrix_pre_and_post,
+                R.layout.view_matrix_pre_post_diff
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_matrix_translate,
+                R.layout.view_matrix_translate
+            )
+        )
+        return pageModels
+    }
 }
