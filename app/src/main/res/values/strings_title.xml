@@ -52,6 +52,7 @@
     <string name="title_canvas_draw_text_static_layout">StaticLayout</string>
 
     <!-- canvas -->
+    <string name="title_canvas_transform_order">Canvas Transform Order</string>
     <string name="title_canvas_clip">Canvas ClipXXX</string>
     <string name="title_canvas_translate">Canvas Translate</string>
     <string name="title_canvas_rotate">Canvas Rotate</string>
