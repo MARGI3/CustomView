@@ -257,6 +257,12 @@ object PageModelsCreator {
         pageModels.add(ItemModel(R.string.item_title_canvas))
         pageModels.add(
             ItemModel(
+                R.string.title_canvas_transform_order,
+                R.layout.view_canvas_transform_order
+            )
+        )
+        pageModels.add(
+            ItemModel(
                 R.string.title_canvas_clip,
                 R.layout.view_canvas_clip
             )
