@@ -67,4 +67,5 @@
     <!-- draw order -->
     <string name="title_draw_order_after_on_draw">After onDraw()</string>
     <string name="title_draw_order_before_on_draw">Before onDraw()</string>
+    <string name="title_draw_order_on_draw_layout">Layout onDraw()</string>
 </resources>
