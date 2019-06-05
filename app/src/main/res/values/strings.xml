@@ -2,4 +2,7 @@
     <string name="app_name">CustomView</string>
     <string name="btn_text_draw_basic">Draw Basic</string>
     <string name="btn_text_paint">Paint</string>
+
+    <string name="drawable_size">Size: %1$d x %2$d</string>
+    <string name="single_line_text">This is a single line text</string>
 </resources>

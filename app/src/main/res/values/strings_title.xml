@@ -6,6 +6,7 @@
     <string name="item_title_draw_text">Draw Text</string>
     <string name="item_title_canvas">Canvas</string>
     <string name="item_title_matrix">Matrix</string>
+    <string name="item_title_draw_order">Draw Order</string>
 
     <!-- draw -->
     <string name="title_draw_color">drawColor()</string>
@@ -59,6 +60,11 @@
     <string name="title_canvas_scale">Canvas Scale</string>
     <string name="title_canvas_skew">Canvas Skew</string>
 
+    <!-- matrix -->
     <string name="title_matrix_pre_and_post">Matrix preXXX() postXXX() difference</string>
     <string name="title_matrix_translate">Matrix Translate</string>
+
+    <!-- draw order -->
+    <string name="title_draw_order_after_on_draw">After onDraw()</string>
+    <string name="title_draw_order_before_on_draw">Before onDraw()</string>
 </resources>

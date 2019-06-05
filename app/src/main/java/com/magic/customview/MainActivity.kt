@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         itemList.addAll(PageModelsCreator.getCanvasDrawTextModelList())
         itemList.addAll(PageModelsCreator.getCanvasModelList())
         itemList.addAll(PageModelsCreator.getMatrixModelList())
+        itemList.addAll(PageModelsCreator.getDrawOrderList())
         return itemList
     }
 }

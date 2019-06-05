@@ -311,4 +311,22 @@ object PageModelsCreator {
         )
         return pageModels
     }
+
+    fun getDrawOrderList(): ArrayList<ItemModel> {
+        val pageModels = ArrayList<ItemModel>()
+        pageModels.add(ItemModel(R.string.item_title_draw_order))
+        pageModels.add(
+            ItemModel(
+                R.string.title_draw_order_after_on_draw,
+                R.layout.view_draw_order_after_on_draw
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_draw_order_before_on_draw,
+                R.layout.view_draw_order_before_on_draw
+            )
+        )
+        return pageModels
+    }
 }
