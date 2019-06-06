@@ -68,4 +68,9 @@
     <string name="title_draw_order_after_on_draw">After onDraw()</string>
     <string name="title_draw_order_before_on_draw">Before onDraw()</string>
     <string name="title_draw_order_on_draw_layout">Layout onDraw()</string>
+    <string name="title_draw_order_dispatch_draw_layout">Layout DispatchDraw()</string>
+    <string name="title_draw_order_after_on_foreground_draw">After onForegroundDraw()</string>
+    <string name="title_draw_order_before_on_foreground_draw">Before onForegroundDraw()</string>
+    <string name="title_draw_order_after_draw">After draw()</string>
+    <string name="title_draw_order_before_draw">Before draw()</string>
 </resources>

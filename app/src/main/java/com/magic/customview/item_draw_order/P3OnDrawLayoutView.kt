@@ -9,10 +9,29 @@ import android.support.v7.widget.AppCompatImageView
 import android.support.v7.widget.AppCompatTextView
 import android.support.v7.widget.LinearLayoutCompat
 import android.util.AttributeSet
+import android.util.Log
 import com.magic.customview.BuildConfig
 import com.magic.customview.R
 
-
+/**
+ * Draw traversal performs several drawing steps which must be executed
+ * in the appropriate order:
+ *
+ *      1. Draw the background
+ *      2. If necessary, save the canvas' layers to prepare for fading
+ *      3. Draw view's content
+ *      4. Draw children
+ *      5. If necessary, draw the fading edges and restore layers
+ *      6. Draw decorations (scrollbars for instance)
+ *
+ *         draw()
+ *      1. drawBackground()
+ *      2.
+ *      3. onDraw()
+ *      4. dispatchDraw()
+ *      5.
+ *      6. drawForeground()
+ */
 class P3OnDrawLayoutView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : LinearLayoutCompat(context, attrs, defStyleAttr) {
@@ -35,12 +54,8 @@ class P3OnDrawLayoutView @JvmOverloads constructor(
 
 class Pattern {
 
-    companion object {
-        private const val PATTERN_RATIO = 5F / 6
-    }
-
     private val patternPaint = Paint(Paint.ANTI_ALIAS_FLAG)
-    var spots: Array<Spot>
+    private var spots: Array<Spot>
 
     constructor() {
         spots = arrayOf(
@@ -61,15 +76,12 @@ class Pattern {
 
     fun draw(canvas: Canvas?, width: Int, height: Int) {
         canvas?.let {
-            val repitition = Math.ceil((width / height).toDouble()).toInt()
-            for ((index, value) in spots.withIndex()) {
+            for (index in 0..(spots.size)) {
                 val tempSpot = spots[index % spots.size]
-                canvas.drawCircle(
-                    index / spots.size * height * PATTERN_RATIO + value.relativeX * height,
-                    value.relativeY * height,
-                    value.relativeSize * height,
-                    patternPaint
-                )
+                val cx = width * tempSpot.relativeX
+                val cy = height * tempSpot.relativeY
+                val radius = tempSpot.relativeSize * height
+                canvas.drawCircle(cx, cy, radius, patternPaint)
             }
         }
     }

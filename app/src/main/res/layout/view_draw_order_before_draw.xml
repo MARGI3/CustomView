@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.magic.customview.item_draw_order.P8BeforeDrawView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:text="@string/single_line_text"
+        android:layout_width="match_parent"
+        android:textSize="40sp"
+        android:layout_height="match_parent"/>

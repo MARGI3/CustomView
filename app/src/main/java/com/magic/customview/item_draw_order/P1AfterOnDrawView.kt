@@ -10,7 +10,25 @@ import android.util.AttributeSet
 import com.magic.customview.BuildConfig
 import com.magic.customview.R
 
-
+ /**
+  * Draw traversal performs several drawing steps which must be executed
+  * in the appropriate order:
+  *
+  *      1. Draw the background
+  *      2. If necessary, save the canvas' layers to prepare for fading
+  *      3. Draw view's content
+  *      4. Draw children
+  *      5. If necessary, draw the fading edges and restore layers
+  *      6. Draw decorations (scrollbars for instance)
+  *
+  *         draw()
+  *      1. drawBackground()
+  *      2.
+  *      3. onDraw()
+  *      4. dispatchDraw()
+  *      5.
+  *      6. drawForeground()
+  */
 class P1AfterOnDrawView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : AppCompatImageView(context, attrs, defStyleAttr) {

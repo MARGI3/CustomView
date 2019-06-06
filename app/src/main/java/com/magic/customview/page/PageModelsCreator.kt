@@ -333,6 +333,36 @@ object PageModelsCreator {
                 R.layout.view_draw_order_on_draw_layout
             )
         )
+        pageModels.add(
+            ItemModel(
+                R.string.title_draw_order_dispatch_draw_layout,
+                R.layout.view_draw_order_dispatch_draw_layout
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_draw_order_after_on_foreground_draw,
+                R.layout.view_draw_order_after_on_foreground_draw
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_draw_order_before_on_foreground_draw,
+                R.layout.view_draw_order_before_on_foreground_draw
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_draw_order_after_draw,
+                R.layout.view_draw_order_after_draw
+            )
+        )
+        pageModels.add(
+            ItemModel(
+                R.string.title_draw_order_before_draw,
+                R.layout.view_draw_order_before_draw
+            )
+        )
         return pageModels
     }
 }
